@@ -5,7 +5,8 @@
 
 int main() {
     int nilai = 80;
-    std::cout << "Nilai: " << Nilai << "\n";
+    int bonus = 10;
+    std::cout << "Nilai: " << nilai << "\n";
     std::cout << "Bonus: " << bonus << "\n";
     return 0;
 }
