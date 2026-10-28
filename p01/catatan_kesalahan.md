@@ -1,21 +1,27 @@
 # Catatan Kesalahan - Praktikum 01
 
-## 1. Kesalahan Sintaks (Syntax Error)
-* **Deskripsi Kesalahan:** Muncul pesan error `expected ';' before 'return'` saat proses kompilasi.
+# k1_sintaks.cpp
+* **Deskripsi kesalahan:** muncul pesan error saat buka pada visual studio code.
 * **Penyebab:** Lupa menambahkan titik koma `;` pada akhir baris perintah `Nilai`. //lupa kasih ; pada baris perintah 
-* **Solusi:** Menambahkan tanda titik koma `;` di akhir baris tersebut kemudian mengompilasi ulang program.
+* **solusi:** Menambahkan tanda titik koma `;` di akhir baris tersebut kemudian mengompilasi ulang program. apabila tidak diperbaiki maka program tidak dapat berjalan.
 
-## 2. Kesalahan Logika (Logical Error)
-// identifier "Nilai" is undefined tidak terdefinisi karena salah huruf kecil dan besar dibedakan
+## k2_nama.cpp
+* **Deskripsi Kesalahan:** / identifier "Nilai" is undefined 
 // identifier "bonus" is undefinedC/C++(20) bonus tidak ada pada sintaks diatas.
-* **Deskripsi Kesalahan:** Hasil perhitungan rata-rata bernilai salah atau `0` saat membagi total jumlah data.
-* **Penyebab:** Tipe data yang digunakan untuk menampung total nilai awal adalah integer, bukan desimal (`double`).
-* **Solusi:** Mengubah tipe data variabel `jumlah` dan `rerata` menjadi `double` agar pembagian desimal berjalan presisi.
+* **Penyebab:** nilai tidak terdefinisi karena salah huruf kecil dan besar tidak dibedakan.
+bonus tidak ada pada sintaks diatas.
+* **Solusi:** Memperbaiki huruf pada nilai, memperbaiki dengan memberikan "bonus" pada program
 
-## 3. Kendala Build & Git
-* **Deskripsi Kesalahan:** File hasil kompilasi (`hello.exe` atau `rerata.exe`) ikut masuk ke status pelacakan Git.
-* **Penyebab:** Berkas `.gitignore` belum diletakkan pada folder utama repositori.
-* **Solusi:** Menambahkan berkas `.gitignore` yang berisi baris `*.exe` di folder utama agar file executable diabaikan secara otomatis.
+## k3_runtime.cpp
+* **Deskripsi Kesalahan:** Arithmetic exception
+* **Penyebab:** Dalam matematika dan pemrograman C++, membagi bilangan dengan nol tidak terdefinisi sehingga sistem operasi akan menghentikan program secara mendadak (Runtime Error).
+* **Solusi:** memasukkan perulangan while (looping).
 
-## k3 Exception has occurred.
-Arithmetic exception
+## k4_logika.cpp
+* **Deskripsi Kesalahan:** Angka yang muncul tidak sesuai permintaan dengan menggunakan 2 desimal.
+* **Penyebab:** Pembagian tidak menggunakan desimal. tidak ada perintah 2 angka dibelakang koma. std::setprecision belum include #include <iomanip>
+* **Solusi:** pembagian dengan bilangan desimal, 
+std::setprecision(2); // Menampilkan dua angka di belakang koma 
+#include <iomanip> // Untuk std::fixed dan std::setprecision
+
+**Deklarasi AI : Menggunakan AI Gemini, mencari tahu penyebabnya dan solusi terbaik dalam menyempurnakan program c++.**
